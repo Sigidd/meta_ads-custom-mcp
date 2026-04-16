@@ -1,10 +1,15 @@
+"use client";
+import { useSearchParams } from "next/navigation";
 import { Suspense } from "react";
 
-function ConnectContent({ searchParams }: { searchParams: { error?: string } }) {
-  const error = searchParams.error;
+function ConnectContent() {
+  const params = useSearchParams();
+  const error = params.get("error");
+
   return (
     <div style={{ minHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center", background: "#f0f2f5", fontFamily: "system-ui, sans-serif" }}>
       <div style={{ background: "#fff", borderRadius: 12, padding: "2.5rem", maxWidth: 420, width: "90%", boxShadow: "0 2px 16px rgba(0,0,0,0.1)", textAlign: "center" }}>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src="/icon.png" alt="Meta Ads" width={64} height={64} style={{ borderRadius: 12, marginBottom: "1rem" }} />
         <h1 style={{ fontSize: "1.4rem", fontWeight: 700, marginBottom: "0.5rem", color: "#1c1e21" }}>Meta Ads MCP</h1>
         {error ? (
@@ -24,10 +29,10 @@ function ConnectContent({ searchParams }: { searchParams: { error?: string } }) 
   );
 }
 
-export default function ConnectPage({ searchParams }: { searchParams: { error?: string } }) {
+export default function ConnectPage() {
   return (
     <Suspense>
-      <ConnectContent searchParams={searchParams} />
+      <ConnectContent />
     </Suspense>
   );
 }
