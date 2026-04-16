@@ -17,7 +17,7 @@ import { generateId, getBaseUrl } from "@/lib/auth";
 import { store } from "@/lib/store";
 
 const USER_COOKIE = "mcp_user_id";
-const META_SCOPES = "ads_read,ads_management,business_management,pages_read_engagement,pages_manage_ads,pages_show_list,read_insights";
+const META_SCOPES = "ads_read,ads_management,business_management,pages_read_engagement,pages_manage_ads,pages_show_list,pages_manage_posts,pages_read_user_content";
 
 export async function GET(req: NextRequest) {
   const { searchParams } = req.nextUrl;
