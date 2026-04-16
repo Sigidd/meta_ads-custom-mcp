@@ -57,7 +57,7 @@ There is NO connect form. The user never enters credentials manually.
 ## Meta OAuth Details
 
 - Facebook Login URL: `https://www.facebook.com/v22.0/dialog/oauth`
-- Scopes: `ads_read,ads_management,business_management,pages_read_engagement,pages_manage_ads,pages_show_list,read_insights`
+- Scopes: `ads_read,ads_management,business_management,pages_read_engagement,pages_manage_ads,pages_show_list`
 - Token exchange: `GET https://graph.facebook.com/v22.0/oauth/access_token?client_id=...&redirect_uri=...&client_secret=...&code=...`
 - Long-lived token: `GET https://graph.facebook.com/v22.0/oauth/access_token?grant_type=fb_exchange_token&...`
 - Long-lived token expires in ~60 days
